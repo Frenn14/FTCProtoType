@@ -23,6 +23,42 @@ public class DrivingMotor extends OpMode {
         this.MaxSpeed           = MaxSpeed;
     }
 
+    public void moveForward(){
+
+    }
+
+    public void moveBack(){
+
+    }
+
+    public void moveLeft(){
+
+    }
+
+    public void moveRight(){
+
+    }
+
+    public void moveLeftForward(){
+
+    }
+
+    public void moveLeftBack(){
+
+    }
+
+    public void moveRightForward(){
+
+    }
+
+    public void moveRightBack(){
+
+    }
+
+    public void moveStop(){
+
+    }
+
     @Override
     public void init() {}
 
