@@ -9,9 +9,9 @@ public class DrivingMotor extends OpMode {
     DcMotor leftBackMotor;      //Driving base left Back motor
     DcMotor rightFrontMotor;    //Driving base right front motor
     DcMotor rightBackMotor;     //Driving base right back motor
-    double  MaxSpeed;           //Driving base movement max speed
+    double  Speed;           //Driving base movement max speed
 
-    public DrivingMotor(String leftFrontMotor, String leftBackMotor, String rightFrontMotor, String rightBackMotor, double MaxSpeed) {
+    public DrivingMotor(String leftFrontMotor, String leftBackMotor, String rightFrontMotor, String rightBackMotor, double Speed) {
 
         // Connect to motor (Position Normal Input Assumption)
         this.leftFrontMotor     = hardwareMap.get(DcMotor.class, leftFrontMotor);
@@ -20,7 +20,7 @@ public class DrivingMotor extends OpMode {
         this.rightBackMotor     = hardwareMap.get(DcMotor.class, rightBackMotor);
 
         // Maximum Speed Settings (Assume a configurable range
-        this.MaxSpeed           = MaxSpeed;
+        this.Speed           = Speed;
     }
 
     public void moveForward(){
