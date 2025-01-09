@@ -7,13 +7,14 @@ import org.firstinspires.ftc.robotcontroller.EsDing.DrivingMotor;
 
 @TeleOp(name = "main", group = "FTC")
 public class main extends OpMode {
+    DrivingMotor diving;
+
     @Override
     public void init() {
-        DrivingMotor diving = new DrivingMotor("A", "B", "C", "D",1.0);
+        diving = new DrivingMotor("A", "B", "C", "D",1.0);
     }
 
     @Override
     public void loop() {
-
     }
 }
