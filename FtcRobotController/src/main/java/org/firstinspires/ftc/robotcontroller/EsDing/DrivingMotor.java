@@ -1,10 +1,9 @@
 package org.firstinspires.ftc.robotcontroller.EsDing;
 
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-public class DrivingMotor extends OpMode {
+public class DrivingMotor extends LinearOpMode {
 
     DcMotor leftFrontMotor;     //Driving base left front motor
     DcMotor leftBackMotor;      //Driving base left Back motor
@@ -120,8 +119,6 @@ public class DrivingMotor extends OpMode {
     }
 
     @Override
-    public void init() {}
+    public void runOpMode() {}
 
-    @Override
-    public void loop() {}
 }
