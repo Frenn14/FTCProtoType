@@ -2,19 +2,19 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import org.firstinspires.ftc.robotcontroller.EsDing.DrivingMotor;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 @TeleOp(name = "main", group = "FTC")
 public class main extends OpMode {
-    DrivingMotor diving;
+
 
     @Override
     public void init() {
-        diving = new DrivingMotor("A", "B", "C", "D",1.0);
+
     }
 
     @Override
     public void loop() {
+
     }
 }
