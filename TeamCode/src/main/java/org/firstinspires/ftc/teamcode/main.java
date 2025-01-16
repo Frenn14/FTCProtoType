@@ -168,11 +168,13 @@ public class main extends LinearOpMode {
 
     // slideRotationServo function
     public void slideRotationUp(int sleepTime){
+        telemetry               .addData("SlideRotation", "Up");
         leftSlideRotation       .setPosition(0.8);
         rightSlideRotation      .setPosition(0.8);
         sleep(sleepTime);
     }
     public void slideRotationDown(int sleepTime){
+        telemetry               .addData("SlideRotation", "Down");
         leftSlideRotation       .setPosition(0.0);
         rightSlideRotation      .setPosition(0.0);
         sleep(sleepTime);
