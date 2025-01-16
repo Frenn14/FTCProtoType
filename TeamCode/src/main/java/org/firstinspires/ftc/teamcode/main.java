@@ -166,6 +166,24 @@ public class main extends LinearOpMode {
         sleep(sleepTime);
     }
 
+    // armMotor function
+    public void leftArmForward(int sleepTime, double power) {
+        telemetry       .addData("leftArm", "Forward");
+        leftArm         .setPower( power);
+        if (sleepTime != 0) { sleep(sleepTime); }
+    }
+    public void leftArmBack(int sleepTime, double power) {
+        telemetry       .addData("leftArm", "Back");
+        leftArm         .setPower(-power);
+        if (sleepTime != 0) { sleep(sleepTime); }
+    }
+    public void leftArmStop(int sleepTime, double power) {
+        telemetry       .addData("leftArm", "Stop");
+        leftArm         .setPower( 0.0  );
+        if (sleepTime != 0) { sleep(sleepTime); }
+    }
+
+
     // slideRotationServo function
     public void slideRotationUp(int sleepTime){
         telemetry               .addData("SlideRotation", "Up");
@@ -177,6 +195,20 @@ public class main extends LinearOpMode {
         telemetry               .addData("SlideRotation", "Down");
         leftSlideRotation       .setPosition(0.0);
         rightSlideRotation      .setPosition(0.0);
+        sleep(sleepTime);
+    }
+
+    // slideRotationServo function
+    public void slidePickClose(int sleepTime){
+        telemetry               .addData("SlidePick", "Close");
+        leftSlideRotation       .setPosition(0.0);
+        rightSlideRotation      .setPosition(0.0);
+        sleep(sleepTime);
+    }
+    public void slidePickOpen(int sleepTime){
+        telemetry               .addData("SlidePick", "Up");
+        leftSlideRotation       .setPosition(0.3);
+        rightSlideRotation      .setPosition(0.3);
         sleep(sleepTime);
     }
     // -----------------------------------------
@@ -241,6 +273,12 @@ public class main extends LinearOpMode {
         if      (gamepad2.a)                                        { slideRotationDown (0);}
         else if (gamepad2.b)                                        { slideRotationUp   (0);}
     }
+
+    // slide rotation pad input
+    public void padSlidePick(){
+        if      (gamepad2.x)                                        { slidePickClose    (0);}
+        else if (gamepad2.y)                                        { slidePickOpen     (0);}
+    }
     // -----------------------------------------
 
     // run program
@@ -299,7 +337,7 @@ public class main extends LinearOpMode {
         pickUpRotation          .setPosition(0.5);  // mid : 0.5, up : clockRotation
         leftSlideRotation       .setPosition(0.0);  // down : 0.0, up : 0.8
         rightSlideRotation      .setPosition(0.0);  // down : 0.0, up : 0.8
-        SlidePickServo          .setPosition(0.0);  //
+        SlidePickServo          .setPosition(0.0);  // close : 0.0, open : 0.3
         leftLinkServo           .setPosition(0.0);  //
         rightLinkServo          .setPosition(0.0);  //
         viperPickUpServo        .setPosition(0.0);  // pick : 0.6, open : 0.0
@@ -327,6 +365,7 @@ public class main extends LinearOpMode {
 
             // Servo   (GamePad2)
             padSlideRotation();
+            padSlidePick();
 
 
             // test
