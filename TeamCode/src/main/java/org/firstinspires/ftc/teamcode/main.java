@@ -345,7 +345,8 @@ public class main extends LinearOpMode {
 
     //link servo pad input
     public void padLinkServo(){
-        if      (gamepad2.left_stick_y >= 0.0)                      { linkServo        (0,-gamepad2.left_stick_y);}
+        if      (gamepad2.left_stick_y <= 0.0)                      { linkServo        (0,-gamepad2.left_stick_y);}
+        else                                                        { linkServo        (0,0.0);}
     }
 
     //pickUpRotation pad input
