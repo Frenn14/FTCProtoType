@@ -229,12 +229,12 @@ public class main extends LinearOpMode {
     // slideRotationServo function
     public void viperPickClose(int sleepTime){
         telemetry               .addData("ViperPick", "Close");
-        SlidePickServo          .setPosition(0.6);
+        viperPickUpServo        .setPosition(0.6);
         sleep(sleepTime);
     }
     public void viperPickOpen(int sleepTime){
         telemetry               .addData("ViperPick", "Open");
-        SlidePickServo          .setPosition(0.0);
+        viperPickUpServo        .setPosition(0.0);
         sleep(sleepTime);
     }
 
